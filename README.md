@@ -9,19 +9,6 @@
 🌐: [https://visualexcel.netlify.app](https://visualexcel.netlify.app) 
 
 ---
-ExcelAnalytics/
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── package.json
-├── backend/
-│   ├── controllers/
-│   ├── routes/
-│   ├── models/
-│   ├── utils/
-│   ├── config/
-│   └── server.js
-└── README.md
 
 ## 🛠 Tech Stack
 
