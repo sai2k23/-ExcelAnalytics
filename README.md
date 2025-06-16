@@ -6,8 +6,7 @@
 
 ## 🌟 Live Demo
 
-🌐 Frontend: [https://visualexcel.netlify.app](https://visualexcel.netlify.app)  
-🌐 Backend: [https://excelanalytics-backend-l7ql.onrender.com](https://excelanalytics-backend-l7ql.onrender.com)
+🌐: [https://visualexcel.netlify.app](https://visualexcel.netlify.app) 
 
 ---
 
