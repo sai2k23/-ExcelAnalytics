@@ -1,0 +1,15 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Add base styles for light/dark */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  background-color: #111827; /* Tailwind's dark:bg-gray-900 */
+  color: #f9fafb; /* Tailwind's text-white */
+}
