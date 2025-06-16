@@ -6,7 +6,7 @@
 
 ## 🌟 Live Demo
 
-🌐: [https://visualexcel.netlify.app](https://visualexcel.netlify.app) 
+[![Live - VisualExcel](https://img.shields.io/badge/Live%20Demo-Click%20Here-0f62fe?style=for-the-badge&logo=netlify&logoColor=white)](https://visualexcel.netlify.app) 
 
 ---
 
