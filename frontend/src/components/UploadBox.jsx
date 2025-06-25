@@ -15,6 +15,7 @@ const UploadBox = ({ onDataParsed }) => {
 
     setUploadedFile(file);
     setFileName(file.name);
+
     const formData = new FormData();
     formData.append("file", file);
 
@@ -33,16 +34,25 @@ const UploadBox = ({ onDataParsed }) => {
       localStorage.setItem("excelData", JSON.stringify(json.data));
       localStorage.setItem("selectedSheet", defaultSheet);
 
-      const uploadHistory =
-        JSON.parse(localStorage.getItem("uploadHistory")) || [];
-      uploadHistory.push({
-        name: file.name,
-        timestamp: new Date().toISOString(),
-      });
-      localStorage.setItem("uploadHistory", JSON.stringify(uploadHistory));
-
       setExcelData(json.data);
       onDataParsed(json.data);
+
+      // 🆕 Read file as base64 and save in history
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const base64Data = event.target.result.split(",")[1];
+
+        const uploadHistory = JSON.parse(localStorage.getItem("uploadHistory")) || [];
+        uploadHistory.push({
+          name: file.name,
+          timestamp: new Date().toISOString(),
+          data: base64Data, // ✅ Include base64 data for preview
+        });
+
+        localStorage.setItem("uploadHistory", JSON.stringify(uploadHistory));
+      };
+
+      reader.readAsDataURL(file); // ✅ Triggers base64 extraction
 
       // Auto-scroll to table
       setTimeout(() => {
